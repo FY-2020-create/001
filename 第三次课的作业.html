@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        alert('hello word');
+        var a1 = 'Hello',
+            b1 = 'Word';
+            console.log(a1,b1);
+        
+        console.log('hello'+' '+'word');
+        
+        var un='hello';
+        console.log(un+' '+'word');
+        
+        var str1 = 'hello',
+        str2 = ' word';
+        console.log(str1.concat(str2));  //hello world
+         
+        let arr = [1, 5, 6, 7,'8',  10]
+        const sum = arr.reduce((pre,item) => {
+    return Number(pre) +Number(item)
+},0)
+        console.log(sum)
+
+        
+        /*    let arr = [1, 5, 6, 7, "8", 10]
+function getSum(arr) {
+    const sum = arr.reduce((first, second) => Number(first) + Number(second))
+    return sum;
+}
+const sum = getSum(arr)
+console.log(sum) */
+
+
+
+let str = "can-enter-volunteer-organization"
+function change(str) {
+    console.log(str.replace(/-./g, chars => chars[1].toUpperCase()));
+}
+change(str)         //"canEnterVolunteerOrganization"
+
+let arr2 = ["myfirstactivity", "today activity", "yourActivity", "activitys"]
+const newArr = arr2.filter((name) => name.includes("activity"))
+console.log(newArr);
+
+
+let arr3 = [[1, 2], 3, [4, [5, [6]], 7]]
+function even(arr3) {
+    var result = [];
+    function inner(arr3) {
+        for (var i = 0; i < arr3.length; i++) {
+            // typeof arr3[i] === 'array'
+            if (Array.isArray(arr3[i])) {
+                inner(arr3[i]);}
+             else {
+                result.push(arr3[i]);
+             }
+        }
+    }
+    inner(arr3)
+    return result;
+}
+console.log(even(arr3));
+
+let arr4 = [{ id: 10, name: 'kc' }, { id: 8, name: 'hy' }, { id: 15, name: 'pipi' }, { id: 2, name: 'mama' }]
+const sortNumber=(p) => (m, n) => m[p] - n[p];
+console.log(arr4.sort(sortNumber('id'))); 
+    
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
