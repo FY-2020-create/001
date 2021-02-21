@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易云音乐</title>
+
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/animation.css">
+</head>
+<body>
+    <div id="D1">
+        <div>
+            <a onclick="disappear()" class="a1-1" href="#">x</a>
+        </div>
+        <div>
+            <img class="img4" src="./图标/Image 4.png"/>
+            <input onfocus="this.placeholder=''" onblur="this.placeholder='请输入手机号码';" class="in2" placeholder="请输入手机号码">
+            <input type="password" onfocus="this.placeholder=''" onblur="this.placeholder='请输入密码';" class="in2" placeholder="请输入密码">
+            <button onclick="login()" class="bt1">登录</button>
+            <img style="width: 345px;margin-top: 30px;" src="./图标/Image 5.png"/>
+        </div>
+    </div>
+    <div id="d1">
+        <img class="img1" src="./图标/Image 2.png"/>
+        <a class="a1-1" href="#">网易云音乐</a>
+        <img class="search_img" src="./图标/search.png">
+            <input name="keywords" type="text" id="in1" placeholder="搜索" style="color:#FFF;background-color: #E13E3E;" onfocus="this.placeholder='';hotSearchOn()" onblur="this.placeholder='搜索';" onkeydown=" if (event.keyCode == 13 ) doSearch();hotSearchOff();detail_off()">
+        <a class="login" href="#" onclick="appear()">登录</a>
+        <div class="d1-1">            
+            <img src="./图标/Image 3.png" class="img2"/>
+            <a class="a1-2" href="#">昵称</a>
+            <a class="a1-3" href="#">开通vip</a>
+            <!-- <a class="a1-4" href="#">x</a> -->
+           <!--  <img style="height: 57px;position: absolute;left: 65px;" src="./图标/Image 6.png"/> -->
+        </div>
+    </div>
+    <div class="search_div">
+        <p>热搜榜</p>
+        <ul>
+            <li><a href="#" onclick="click_hotsearch(this)"></a></li>
+            <li><a href="#" onclick="click_hotsearch(this)"></a></li>
+            <li><a href="#" onclick="click_hotsearch(this)"></a></li>
+            <li><a href="#" onclick="click_hotsearch(this)"></a></li>
+            <li><a href="#" onclick="click_hotsearch(this)"></a></li>
+            <li><a href="#" onclick="click_hotsearch(this)"></a></li>
+            <li><a href="#" onclick="click_hotsearch(this)"></a></li>
+            <li><a href="#" onclick="click_hotsearch(this)"></a></li>
+            <li><a href="#" onclick="click_hotsearch(this)"></a></li>
+            <li><a href="#" onclick="click_hotsearch(this)"></a></li>
+        </ul>
+        <div id="rank-more">
+            <span class="span-h7"><a href="#">查看更多</a></span>
+        </div>
+    </div>
+    <div onclick="hotSearchOff()" id="d2">
+        <div class="d2-1d">
+            <div class="d2-1">
+                <a  href="#" class="a2-1">
+                    <p onclick=" bcchange(this);headOn();">
+                        &nbsp;&nbsp;发现音乐
+                    </p>
+                   </a>
+                <a  href="#" class="a2-2">
+                    <p onclick=" bcchange(this)">
+                    &nbsp;&nbsp;视频
+                </p></a>
+                <a  href="#" class="a2-2">
+                    <p onclick=" bcchange(this)">
+                        &nbsp;&nbsp;朋友
+                    </p>
+                    </a>
+                <a  href="#" class="a2-2">
+                    <p onclick=" bcchange(this)">
+                        &nbsp;&nbsp;直播
+                    </p>
+                    </a>
+                <a  href="#" class="a2-2">
+                    <p onclick=" bcchange(this)">
+                        &nbsp;&nbsp;私人FM
+                    </p></a>
+                <!-- <p class="d2-1s">我的音乐</p> -->
+                <li class="d2-1-7">我的歌单</li>
+            </div>
+           <!--  <div class="userList">
+                <p class="d2-1-6">我喜欢的音乐
+                </p>
+                <p class="d2-1-7">我的歌单</p>
+            </div>  -->          
+        </div>
+        <div class="d2-2">
+            <div class="d2-2-1">
+                <a onclick="strong2(this);song_list_off()" class="active2" href="#">个性推荐</a>
+                <a onclick="strong2(this);song_list_on()" href="#">歌单</a>
+                <a onclick="strong2(this)" href="#">主播电台</a>
+                <a onclick="strong2(this)" href="#">排行榜</a>
+                <a onclick="strong2(this)" href="#">歌手</a>
+                <a onclick="strong2(this)" href="#">最新音乐</a>
+            </div>
+            <div   class="d2-2-2">
+                <div class="container">
+                    <div class="imglist">
+                      <ul>
+                          <li id="img1">                         
+                          </li>
+                          <li id="img2">
+                                                 
+                        </li>
+                        <li id="img3">
+                                                  
+                        </li>
+                        <li id="img4">
+                                                  
+                        </li>
+                        <li id="img5">
+                                                   
+                        </li>
+                        <li id="img6">                         
+                        </li>
+                        <li id="img7">                         
+                        </li>
+                        <li id="img8">                         
+                        </li>
+                        <li id="img9">                         
+                        </li>
+                        <li id="img10">                          
+                        </li>
+                      </ul>
+                      <span class="s2-2-1" onclick="lastImg()"><a href="#">&lt;</a></span>                 
+                      <span class="s2-2-2" onclick="nextImg()"><a href="#">&gt;</a></span>                 
+                    </div>
+                    <div class="point">
+                       <ul>
+                           <li class="active3"></li>
+                           <li class="li1"></li>
+                           <li class="li1"></li>
+                           <li class="li1"></li>
+                           <li class="li1"></li>
+                           <li class="li1"></li>
+                           <li class="li1"></li>
+                           <li class="li1"></li>
+                           <li class="li1"></li>
+                           <li class="li1"></li>
+                       </ul>
+                    </div>
+     
+                </div>
+                <div class="container2">
+                    <div class="con-1"><a href="#"><strong>推荐歌单&gt;</strong></a>
+                    </div>
+                     <div class="con-2"></div>
+                </div>
+            </div> 
+            <div   class="d2-2-3">
+                <div class="boutique">
+                    <img src="" alt="">
+                    <div class="zzz">
+                        <span>精品歌单</span>
+                    </div>
+                    <p class="title"></p>
+                    <p class="description"></p>
+                </div>
+                <div class="tag">
+                    <span>
+                        全部歌单
+                    </span>
+                    <p>ACG</p>
+                    <p>影视原声</p>
+                    <p>综艺</p>
+                    <p>轻音乐</p>
+                    <p>另类/独立</p>
+                    <p>电子</p>
+                    <p>民谣</p>
+                    <p>摇滚</p>
+                    <p>流行</p>
+                    <p>华语</p>
+                </div>
+                <div class="song_list"></div>
+            </div>     
+        </div>
+        <div class="result">
+            <div class="result_count"></div>
+            <div class="result_tag">
+                <a onclick="strong3(this);return false" href="">单曲</a>
+                <a onclick="strong3(this);return false" href="">歌手</a>
+                <a onclick="strong3(this);return false" href="">专辑</a>
+                <a onclick="strong3(this);return false" href="">视频</a>
+                <a onclick="strong3(this);return false" href="">歌单</a>
+                <a onclick="strong3(this);return false" href="">歌词</a>
+                <a onclick="strong3(this);return false" href="">主播电台</a>
+                <a onclick="strong3(this);return false" href="">用户</a>
+            </div>
+            <div class="result_music">
+                <table>
+                    <thead>
+                        <tr class="ws">
+                            <th class="w1"></th>
+                            <th class="w2">音乐标题</th>
+                            <th class="w3">歌手</th>
+                            <th class="w4">专辑</th>
+                            <th class="w5">时长</th>
+                        </tr> 
+                    </thead>
+                    <tbody class="tbody">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="music_list" id="">
+            <div class="div1">
+                <div class='d_img'>
+                    <img  style="width: 180px; height:180px; border-radius: 5px;" src="" alt="">  
+                </div>
+               <div class='div1d'>
+                <h2 style="margin:10px;"></h2>
+                 <div class='bof'>
+                   <span  onclick="play_all()" class='plays'>
+                     <a href="#">播放全部</a>
+                   </span>
+                 </div>
+              <p class="mlist_p1" style="color: #676767;font-size: 14px;margin:10px;">标签：<a href=""></a></p>
+              <p class="mlist_p2" style="color: #676767;font-size: 14px;margin:10px;">歌曲：<a></a>&nbsp;&nbsp;播放：<a></a>万</p>
+              <div class="mlist_p3">简介：</div>
+              </div>
+            </div>
+            <div class='div2'>
+                <a onclick="strong(this); disappear_comment()" style="font-size: 15px; font-weight:700; border-bottom: 3px solid #EC4141; margin-right:10px;" href="#">歌单列表</a>
+                <a class='div2_a2' onclick="strong(this);appear_comment()"  style="font-size: 14px;" href="#"></a>
+            </div>
+            <div class="div3">
+                <table>
+                    <thead>
+                        <tr class="ws">
+                            <th class="w1"></th>
+                            <th class="w2">音乐标题</th>
+                            <th class="w3">歌手</th>
+                            <th class="w4">专辑</th>
+                            <th class="w5">时长</th>
+                        </tr> 
+                    </thead>
+                    <tbody class="tbody2">
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="div4"></div>
+        </div>
+    </div>
+    <div class="d2_1">
+        <div class="record">
+            <span class="span1">
+                <div class="more"></div>
+                <div class="more"></div>
+                <div class="more"></div>
+                <div class="more"></div>
+                <div class="cover2">
+                    <img src="./图标/初音未来.jpeg"/>
+                </div>
+            </span>
+        </div>
+        <span onclick="detail_off()" class="span2"></span>
+        <div class="d2_1_1">
+            <span class="sp1"></span>
+            <span class="sp2"></span>
+            <span class="sp3"></span>
+            <span class="sp4"></span>
+        </div>
+        <div class="d2_1_2">
+            <div class="p1"></div>
+            <p class="p2">专辑：<a href="#"></a></p>
+            <p class="p3">歌手：<a href="#"></a></p>
+        </div>
+        <div class="d2_1_3"></div>
+        <div class="d2_1_4">
+            <p><strong>评论</strong></p>
+            <div></div>
+        </div>
+    </div>
+    <div id="d3">
+        <div class="singer">
+            <img onclick="detail()" class="cover" src="./图标/初音未来.jpeg" alt="">
+            <a class="sing_name" onclick="return false;" href="">你好</a>
+            <a class="singer_name" onclick="return false;" href="">初音未来</a>
+        </div>
+        <div class="music">
+            <div class="mid">
+                    <a onclick="play_pre();return false;" href="" class="music-pre"></a>
+                        <a id="play" href="#"><span id="play_s"class="play" onclick="start()"></span></a>         
+                    <a onclick="play_next();return false;" href="" class="music-next"></a>
+                    <a href="" class="music-word">词</a>
+            </div>         
+            <div class="music-progress">
+                <p class="music-progress_p1">00:00</p>
+                <div class="music-progress_line">
+                    <div class="all_time">
+                        <div class="now_time"></div>
+                        <div class="music_point"></div>
+                     </div> 
+                </div>
+                <p class="music-progress_p2">00:00</p>
+            </div>
+            <audio id="audio" src="../初音ミク,MusikM - 你好.mp3"></audio>
+        </div>
+        <div class="music-voice">
+            <img class="voice_img" src="./图标/voice.png" alt="">
+            <div class="voice_d">
+                <div class="voice_p">
+                    <div class="voice_o">
+                    </div>
+                </div>
+             </div>
+        </div>
+        
+    </div>
+    
+    <script src="./js/lojin.js"></script>
+    <script src="./js/banner.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/player.js"></script>
+</body>
+</html>
